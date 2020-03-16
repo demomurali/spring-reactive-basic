@@ -12,6 +12,17 @@ import reactor.core.publisher.Flux;
 public class SubscribersExample {
 
     public static void main(String[] args) {
+/*
+      Flux.interval(Duration.ofMillis(500)).log()
+      .subscribe(
+          (value)-> System.out.println(Thread.currentThread()+"hai"),
+          (error)->System.out.println(error),
+          ()->System.out.println("completed"),
+          (disposable)->disposable.cancel());
+      System.out.println(Thread.currentThread());
+       Thread.sleep(4000);
+*/
+
         Subscriber<String> subscriber = new Subscriber<String>() {
             volatile Subscription subscription;                             // (1)
          

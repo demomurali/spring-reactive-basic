@@ -24,8 +24,17 @@ public final class App {
     }
 
 
+    // Status of the order
+
+    // Manager item packed, on the road, in twoday, recieved
+    // Admin item packed, on the road, in twoday, recieved
+
+    
+
     public static void main(String[] args) throws Exception{
         method().subscribe((value)->System.out.println("1"+value));
+
+        Thread.sleep(3000);
         method().subscribe((value)->System.out.println("2"+value));
         method().subscribe((value)->System.out.println("3"+value));
 
